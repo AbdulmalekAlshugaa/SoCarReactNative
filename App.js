@@ -9,6 +9,7 @@ import AuthNavigator from "./app/navigation/AuthNavigator";
 import AuthContext from "./app/auth/context";
 import authStorage from "./app/auth/storage";
 import { navigationRef } from "./app/navigation/rootNavigation";
+import MyBookingScreen from "./app/screens/MyBooking";
 
 export default function App() {
   const [user, setUser] = useState();

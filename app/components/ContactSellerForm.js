@@ -21,7 +21,7 @@ function ContactSellerForm({ listing }) {
 
     Notifications.presentLocalNotificationAsync({
       title: "Awesome!",
-      body: "Your message was sent to the seller.",
+      body: "Your message was sent.",
     });
   };
 
@@ -38,7 +38,7 @@ function ContactSellerForm({ listing }) {
         numberOfLines={3}
         placeholder="Message..."
       />
-      <SubmitButton title="Contact Seller" />
+      <SubmitButton title="Contact car owner " />
     </Form>
   );
 }

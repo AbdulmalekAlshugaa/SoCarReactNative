@@ -11,6 +11,9 @@ const makeBooking = (carId, onUploadProgress) =>
       onUploadProgress(progress.loaded / progress.total),
   });
 //
+const myBooking = () => client.get("/cars/myBooking");
+const myBookedCar = () => client.get("/cars/myCarsBooking");
+
 export const addListing = (listing, onUploadProgress) => {
   const data = new FormData();
   data.append("title", listing.title);
@@ -37,4 +40,6 @@ export default {
   addListing,
   getListings,
   makeBooking,
+  myBooking,
+  myBookedCar,
 };

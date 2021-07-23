@@ -24,21 +24,18 @@ function ListingDetailsScreen({ route }) {
     >
       <Image
         style={styles.image}
-        preview={{ uri: listing.images[0].thumbnailUrl }}
+        preview={{ uri: listing.carImages[0] }}
         tint="light"
-        uri={listing.images[0].url}
+        uri={listing.carImages[0]}
       />
       <View style={styles.detailsContainer}>
-        <Text style={styles.title}>{listing.title}</Text>
-        <Text style={styles.price}>${listing.price}</Text>
+        <Text style={styles.title}>{listing.carTitle}</Text>
+        <Text style={styles.status}>{listing.bookingStatus}</Text>
+        <Text style={styles.price}>{"Car Owner Info"}</Text>
         <View style={styles.userContainer}>
-          <ListItem
-            image={require("../assets/mosh.jpg")}
-            title="Mosh Hamedani"
-            subTitle="5 Listings"
-          />
+          <Text>Name : {listing.carOwnerId.name}</Text>
+          <Text>Phone Number : {listing.carOwnerId.phoneNumber}</Text>
         </View>
-        <ContactSellerForm listing={listing} />
       </View>
     </KeyboardAvoidingView>
   );
@@ -62,8 +59,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "500",
   },
+  status: {
+    fontSize: 18,
+    fontWeight: "300",
+  },
   userContainer: {
-    marginVertical: 40,
+    marginVertical: 5,
   },
 });
 

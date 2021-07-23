@@ -15,7 +15,7 @@ const menuItems = [
       name: "format-list-bulleted",
       backgroundColor: colors.primary,
     },
-    targetScreen: routes.MESSAGES,
+    targetScreen: routes.MYBOOKING,
   },
   {
     title: "My Booked Car",
@@ -23,7 +23,7 @@ const menuItems = [
       name: "email",
       backgroundColor: colors.secondary,
     },
-    targetScreen: routes.MESSAGES,
+    targetScreen: routes.MYBOOKEDCAR,
   },
   {
     title: "About us",
