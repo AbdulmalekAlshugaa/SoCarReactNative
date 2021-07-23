@@ -86,34 +86,23 @@ function ListingEditScreen() {
   const [progress, setProgress] = useState(0);
 
   const handleSubmit = async (listing, { resetForm }) => {
-    // setProgress(0);
-    // setUploadVisible(true);
+    setProgress(0);
+    setUploadVisible(true);
+    console.log("Location", location);
 
-    const data = new FormData();
-    data.append("title", listing.title);
-    data.append("price", listing.price);
-    data.append("categoryId", listing.category.value);
-    data.append("description", listing.description);
-    console.log("post cars", data);
+    const result = await listingsApi.addListing(
+      { ...listing, location },
+      (progress) => setProgress(progress)
+    );
 
-    client
-      .post("/cars", {
-        data,
-        location: JSON.stringify(listing.location),
-      })
-      .then((response) => response)
-      .then(console.log);
-    // const result = await listingsApi.addListing(
-    //   { ...listing, location },
-    //   (progress) => setProgress(progress)
-    // );
+    console.log(result.data);
 
-    // if (!result.ok) {
-    //   setUploadVisible(false);
-    //   return alert("Could not save the listing");
-    // }
+    if (!result.ok) {
+      setUploadVisible(false);
+      return alert("Could not save the listing");
+    }
 
-    // resetForm();
+    resetForm();
   };
 
   return (

@@ -12,8 +12,8 @@ function WelcomeScreen({ navigation }) {
       source={require("../assets/background.jpg")}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text style={styles.tagline}>Sell What You Don't Need</Text>
+        <Image style={styles.logo} source={require("../assets/socar.png")} />
+        <Text style={styles.tagline}>Welcome to SoCar </Text>
       </View>
       <View style={styles.buttonsContainer}>
         <Button

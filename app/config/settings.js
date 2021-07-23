@@ -2,7 +2,7 @@ import Constants from "expo-constants";
 
 const settings = {
   dev: {
-    apiUrl: "http://192.168.0.103:3000/api/v1",
+    apiUrl: "https://glacial-inlet-45549.herokuapp.com/api/v1",
     //apiUrl: "http://192.168.0.103:9000/api",
   },
   staging: {
